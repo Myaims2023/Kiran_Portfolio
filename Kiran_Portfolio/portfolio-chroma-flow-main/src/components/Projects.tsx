@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FaExternalLinkAlt, FaGithub, FaCode, FaTimes } from 'react-icons/fa';
-import stationaryImg from "../assets/projects/stationary.png";
-import fileSharingImg from "../assets/projects/File_Sharing.jpeg";
-import autoVoltImg from "../assets/projects/AutoVolt.jpeg";
+import stationaryImg from "../assets/stationary.png";
+import fileSharingImg from "../assets/File_Sharing.jpeg";
+import autoVoltImg from "../assets/AutoVolt.jpeg";
 
 
 interface Project {

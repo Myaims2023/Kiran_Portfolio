@@ -1,6 +1,10 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FaExternalLinkAlt, FaGithub, FaCode, FaTimes } from 'react-icons/fa';
+import stationaryImg from "../assets/projects/stationary.png";
+import fileSharingImg from "../assets/projects/File_Sharing.jpeg";
+import autoVoltImg from "../assets/projects/AutoVolt.jpeg";
+
 
 interface Project {
   id: number;
@@ -24,7 +28,7 @@ const Projects = () => {
       description: 'An e-commerce platform for managing and selling stationary products online',
       longDescription: 'A comprehensive stationary management system that allows users to browse, purchase, and manage stationary products. Features include product catalog, shopping cart, order tracking, and admin dashboard for inventory management.',
       technologies: ['Python', 'MongoDB', 'Django'],
-      image: './src/assets/projects/stationary.png',
+      image: stationaryImg,
       liveUrl: 'https://aims-stationary.onrender.com/',
       githubUrl: 'https://github.com/Myaims2023/Stationary_Aims',
       category: 'fullstack'
@@ -34,8 +38,8 @@ const Projects = () => {
       title: 'File Sharing System',
       description: 'A lightweight, privacy-focused web application designed to securely upload, encrypt, and share files with others using unique download links or QR codes. This project is ideal for learning and building real-world secure file-handling workflows.',
       longDescription: 'A powerful task management application with real-time collaboration features. Built using React, Socket.io, and Express.js. Includes team workspaces, deadline tracking, file sharing, and progress analytics.',
-      technologies: ['Python', 'HTML', 'Css', 'MongoDB', 'QR-code Generation' ,'AES Encyprtion'],
-      image: './src/assets/projects/File_Sharing.jpeg',
+      technologies: ['Python', 'HTML', 'Css', 'MongoDB', 'QR-code Generation', 'AES Encyprtion'],
+      image: fileSharingImg,
       liveUrl: 'https://github.com/Myaims2023/file-share-system/tree/main/shareflow-printlimit-main',
       githubUrl: 'https://github.com/Myaims2023/file-share-system/tree/main/shareflow-printlimit-main',
       category: 'frontend'
@@ -56,8 +60,8 @@ const Projects = () => {
       title: 'AutoVolt',
       description: 'AutoVolt is an automated Internet of Things (IoT)–based system designed to provide reliable, remote, and context-aware control of electrical devices. It empowers users to manage power delivery through a secure web interface, enabling seamless on/off control, scheduling, and monitoring of connected equipment.',
       longDescription: 'A complete restaurant management system with order processing, inventory tracking, staff management, and sales analytics. Built with React Native for tablet use and Node.js backend.',
-      technologies: ['IoT', 'Arduino', 'Sensors',' Embedded Systems','MongoDB', 'React.js', 'Node.js', 'Express.js', 'Tailwind CSS', 'Granfana'],
-      image: './src/assets/projects/AutoVolt.jpeg',
+      technologies: ['IoT', 'Arduino', 'Sensors', ' Embedded Systems', 'MongoDB', 'React.js', 'Node.js', 'Express.js', 'Tailwind CSS', 'Granfana'],
+      image: autoVoltImg,
       liveUrl: 'https://github.com/Myaims2023/AutoVolt',
       githubUrl: 'https://github.com/Myaims2023/AutoVolt',
       category: 'fullstack'
@@ -157,11 +161,11 @@ const Projects = () => {
                   <h3 className="text-xl font-bold text-foreground group-hover:text-primary transition-colors duration-300">
                     {project.title}
                   </h3>
-                  
+
                   <p className="text-muted-foreground line-clamp-2">
                     {project.description}
                   </p>
-                  
+
                   {/* Technologies */}
                   <div className="flex flex-wrap gap-2">
                     {project.technologies.slice(0, 3).map((tech, index) => (
@@ -178,7 +182,7 @@ const Projects = () => {
                       </span>
                     )}
                   </div>
-                  
+
                   {/* Action Buttons */}
                   <div className="flex items-center justify-between pt-4">
                     <motion.button
@@ -192,7 +196,7 @@ const Projects = () => {
                       <FaCode />
                       <span className="font-medium">View Details</span>
                     </motion.button>
-                    
+
                     <div className="flex space-x-3">
                       <motion.a
                         href={project.githubUrl}
@@ -204,7 +208,7 @@ const Projects = () => {
                       >
                         <FaGithub className="text-primary" />
                       </motion.a>
-                      
+
                       <motion.a
                         href={project.liveUrl}
                         target="_blank"
@@ -268,7 +272,7 @@ const Projects = () => {
                   <p className="text-muted-foreground leading-relaxed">
                     {selectedProject.longDescription}
                   </p>
-                  
+
                   {/* Technologies */}
                   <div>
                     <h4 className="text-lg font-semibold mb-3">Technologies Used</h4>
@@ -283,7 +287,7 @@ const Projects = () => {
                       ))}
                     </div>
                   </div>
-                  
+
                   {/* Action Buttons */}
                   <div className="flex flex-col sm:flex-row gap-4 pt-6">
                     <motion.a
@@ -296,7 +300,7 @@ const Projects = () => {
                       <FaExternalLinkAlt />
                       <span>View Live Project</span>
                     </motion.a>
-                    
+
                     <motion.a
                       href={selectedProject.githubUrl}
                       target="_blank"
